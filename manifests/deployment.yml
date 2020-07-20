@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "sarra-cc72"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "sarra-cc72"
+    spec:
+      containers:
+        - name: "sarra-cc72"
+          image: "sarra.azurecr.io/sarra"
+          ports:
+          - containerPort: 5000
